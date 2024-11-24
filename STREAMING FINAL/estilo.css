@@ -1,0 +1,177 @@
+/* Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Navegação */
+.navbar {
+    background-color: rgba(20, 20, 20, 0.9);
+}
+
+.navbar-brand img {
+    height: 30px;
+}
+
+.nav-link {
+    color: #fff !important;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #e50914 !important;
+}
+
+.dropdown-menu {
+    background-color: #333;
+    border: none;
+}
+
+.dropdown-item {
+    color: #fff !important;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-item:hover {
+    background-color: #444;
+    color: #e50914 !important;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+/* Formulário de Pesquisa */
+form {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+}
+
+form .form-control {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+form .form-control::placeholder {
+    color: #bbb;
+}
+
+form .btn {
+    background-color: #e50914;
+    border: none;
+}
+
+form .btn:hover {
+    background-color: #b20710;
+}
+
+/* Ícones e Avatar */
+.navbar .d-flex .fa-bell {
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar .d-flex .fa-bell:hover {
+    color: #e50914;
+}
+
+.navbar .d-flex img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Carrossel */
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #e50914;
+}
+
+/* Seção de Cartões */
+.card {
+    background-color: #333;
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-title {
+    font-size: 16px;
+    margin: 10px 0 0;
+    text-align: center;
+}
+
+.row-cols-md-4 > .col {
+    margin-bottom: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-brand img {
+        height: 25px;
+    }
+
+    form {
+        max-width: 200px;
+    }
+
+    .carousel-item img {
+        height: 300px;
+    }
+
+    .card-title {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar-brand img {
+        height: 20px;
+    }
+
+    .carousel-item img {
+        height: 250px;
+    }
+
+    .card-title {
+        font-size: 12px;
+    }
+}
