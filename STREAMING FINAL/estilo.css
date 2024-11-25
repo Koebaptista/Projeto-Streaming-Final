@@ -1,4 +1,3 @@
-/* Geral */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +11,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Navegação */
 .navbar {
     background-color: rgba(20, 20, 20, 0.9);
 }
@@ -50,7 +48,6 @@ body {
     border: none;
 }
 
-/* Formulário de Pesquisa */
 form {
     flex-grow: 1;
     display: flex;
@@ -78,7 +75,6 @@ form .btn:hover {
     background-color: #b20710;
 }
 
-/* Ícones e Avatar */
 .navbar .d-flex .fa-bell {
     font-size: 18px;
     transition: color 0.3s;
@@ -94,7 +90,6 @@ form .btn:hover {
     border-radius: 50%;
 }
 
-/* Carrossel */
 .carousel-item img {
     height: 400px;
     object-fit: cover;
@@ -112,34 +107,43 @@ form .btn:hover {
     background-color: #e50914;
 }
 
-/* Seção de Cartões */
-.card {
+.container-boxart {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Proporção 16:9 */
+    overflow: hidden;
     background-color: #333;
-    border: none;
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+.boxart-arredondado {
+    border-radius: 8px;
 }
 
-.card img {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+.boxart-16x9 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.card-title {
-    font-size: 16px;
-    margin: 10px 0 0;
+.container-texto-fallback {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px;
     text-align: center;
 }
 
-.row-cols-md-4 > .col {
-    margin-bottom: 20px;
+.texto-fallback {
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .navbar-brand img {
         height: 25px;
@@ -153,8 +157,8 @@ form .btn:hover {
         height: 300px;
     }
 
-    .card-title {
-        font-size: 14px;
+    .texto-fallback {
+        font-size: 12px;
     }
 }
 
@@ -171,7 +175,7 @@ form .btn:hover {
         height: 250px;
     }
 
-    .card-title {
-        font-size: 12px;
+    .texto-fallback {
+        font-size: 10px;
     }
 }
